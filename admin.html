@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QueueLess Staff</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><h1>Counter control</h1><p>Call students in order and keep the queue moving.</p><a href="index.html">Student page</a></header>
+<main>
+  <section id="login" class="panel" style="max-width:360px">
+    <b>Staff login</b>
+    <input type="password" id="pw" placeholder="Password">
+    <div class="err" id="err"></div>
+    <button class="btn" id="go">Log in</button>
+  </section>
+
+  <section id="dash" class="hide">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <div class="tabs" id="tabs"></div>
+      <button class="btn alt" id="out">Log out</button>
+    </div>
+    <div class="panel">
+      <span style="color:var(--mut)">Now serving</span>
+      <div class="now" id="now">—</div><div id="nowname" style="color:var(--mut)"></div>
+      <div class="row" style="margin-top:14px">
+        <button class="btn" id="next">Call next</button>
+        <button class="btn alt" id="done">Mark done</button>
+        <button class="btn warn" id="skip">No show, skip</button>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="panel">
+      <b>Waiting</b>
+      <table><thead><tr><th>Token</th><th>Name</th><th>Joined</th></tr></thead><tbody id="wait"></tbody></table>
+      <p id="empty" class="hide" style="color:var(--mut)">Nobody is waiting.</p>
+    </div>
+    <div class="panel row">
+      <button class="btn alt" id="reset">Reset today's queue</button>
+      <input id="newname" placeholder="New service name" style="width:220px;margin:0"><input id="newavg" type="number" min="1" placeholder="Min/student" style="width:130px;margin:0">
+      <button class="btn alt" id="add">Add service</button>
+    </div>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body></html>

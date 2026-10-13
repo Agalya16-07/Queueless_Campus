@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QueueLess Campus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header>
+  <h1>QueueLess Campus</h1>
+  <p>Get a token from your phone. Wait anywhere. Walk in when it's your turn.</p>
+  <a href="admin.html">Staff login</a>
+</header>
+<main>
+  <section id="pick">
+    <h2>Which service do you need?</h2>
+    <div class="grid" id="services"></div>
+    <div class="panel hide" id="form">
+      <b id="chosen"></b>
+      <input id="name" placeholder="Your name" maxlength="60" autocomplete="name">
+      <div class="err" id="err"></div>
+      <div class="row"><button class="btn" id="take">Get my token</button><button class="btn alt" id="back">Choose another</button></div>
+    </div>
+  </section>
+
+  <section id="track" class="hide">
+    <div class="ticket" id="ticket">
+      <div class="top"><span id="tsvc"></span><span><i class="live"></i>Live</span></div>
+      <div class="num" id="tnum">--</div>
+      <div class="tear"></div>
+      <div class="info"><div><b id="tserv">--</b><span>Now serving</span></div><div><b id="tahead">--</b><span>People ahead</span></div></div>
+      <div class="bar"><i id="tbar" style="width:0"></i></div>
+      <div class="msg" id="tmsg"></div>
+    </div>
+    <div class="row" style="justify-content:center"><button class="btn alt" id="cancel">Cancel token</button><button class="btn alt hide" id="newtok">Get another token</button></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body></html>
